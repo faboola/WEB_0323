@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*font stack di sistema. Carica il font di default del sistema operativo*/        
+}
+
+.container {
+  
+    background:#ffff00;
+    width:80%;
+    height: 100%;
+
+}
+
+#item1 {
+
+    background: #ff3399;
+    width: 50%; /*% relativa alla dimensione del genitore */
+
+
+}
+
+.square {
+    background:#1889a8;
+    /* vmin è la misura relativa alla dimensione più piccola del viewport */
+    width:50vmin;
+    height:50vmin;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                               HEADER CON VMIN                              */
+/* -------------------------------------------------------------------------- */
+html {
+
+}
+header {
+    background:rgb(125,0,125);
+    color:#efefef;
+    font-size:2rem;
+    font-weight:900;
+
+    padding: 10vmin 1rem; /*padding sopra e sotto di 10 vmin*/
+    /*NOTA: vmin è la dimensione del lato corto del viewport */
+
+
+}
+
+.myText {
+    font-size: 40px;
+
+}
+
+.textB {
+    font-size: 0.5em; /*relativo alla dimensione font del genitore, cioè .myText*/
+}
