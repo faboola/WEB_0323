@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+display: flex;
+height:600px;
+
+flex-direction: row; /*valore di default */
+/*justify allinea sul MAIN AXIS (default: orizzontale) */
+
+justify-content: flex-start; /*valore di default*/
+justify-content: flex-end; /*in fondo */
+justify-content: center; /*al centro*/
+justify-content: space-between; /*distribuiti dagli estremi*/
+
+justify-content: space-evenly; /*distribuiti equamente in orizzontale*/
+
+
+/*align-items allinea sul CROSS AXIS (default verticale) */
+align-items: stretch; /*valore di default */
+align-items: flex-start; /*allinea in alto */
+align-items: flex-end; /*allina in fondo*/
+align-items: flex-start; /*allinea al centro */
+
+}
+
+.element {
+    border:1px solid #ff9900;
+}
+
+/*WRAP */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /*vai a capo quando finisci lo spazio sulla riga */
+ ;
+}
+
+
+
+.newContainer {
+
+    display: flex;
+    align-items: flex-start;
+    height:300px;
+    flex-direction: row-reverse;
+
+
+}
+
+.newElement {
+    padding:0.5rem;
+    background: #004642;
+    border:1px solid #222;
+}
+
+#elementoA {
+
+    background:#ffd500;
+    /*order:1; lo sposta dopo gli elementi con order:0 (default)*/
+
+}
+
+#elementoB {
+    background: #0fb44e;
+    /*FLEX-GROW fa ingrandire l'elemento sull'asse principale */
+    /*flex-grow:1;*/
+
+}
+
+#elementoC {
+    background: #961e98;
+    /*posso usare valori negativi per spostare l'elemento PRIMA dei default con order:0*/
+    /*order:-1;*/
+
+    /*posso spostare l'elemento singolo sul sistema flexbox*/
+    align-self:flex-end;
+    align-self: center;
+   
+}
+

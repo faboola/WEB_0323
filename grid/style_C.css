@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.myGrid {
+    display:grid;
+    
+    /*possiamo definire righe e colonne con una misura fissa */ 
+    /* grid-template-rows:100px 100px 100px; */
+
+    /*oppure con misure relative */
+
+    grid-template-rows: 1fr 1fr 1fr;
+    /* oppure: repeat(3, 1fr) */
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    height:100vh;
+
+}
+
+#item-1 {
+    background-color: #6f585c;
+    grid-row-start:1;
+    grid-column-start: 1;
+
+    grid-row-end: 2;
+    grid-column-end:2;
+}
+
+#item-2 {
+    background-color: #ffcc00;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:5;
+    grid-column-end: 6
+}
+
+#item-3 {
+    background-color: #00ce82;
+    grid-row-start: 2;
+    grid-column-start: 3;
+
+   /*non serve dichiarare la fine ma possiamo fare così*/
+    grid-column-end: 4;
+    grid-row-end: 3;
+}
+
+#item-4 {
+    background-color: #ce0627;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+#item-5 {
+    background-color: #0471a0;
+    grid-row-start: 3;
+    grid-column-start: 5;
+}

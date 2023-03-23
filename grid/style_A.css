@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-areas:
+
+    "head head head head"
+    "main main . side" /* il punto dichiara un'area vuota */
+    "foot foot foot foot";
+
+    /* definisco i nomi delle aree. Sono nominati in modo indipendente da selettori o classi */
+
+}
+
+
+header {
+    grid-area: head;
+    background-color: deepskyblue;
+}
+
+main {
+    grid-area: main;
+    background-color: deeppink;
+}
+
+.sidebar {
+    grid-area: side;
+    background-color: chartreuse;
+}
+
+footer {
+    grid-area: foot;
+    background-color: blueviolet;
+}
