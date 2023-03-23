@@ -1,0 +1,84 @@
+/*DICHIARO PRIMA LE REGOLE CHE VALGONO PER SCHERMI PICCOLI E CHE POSSONO ESSERE EREDITATE 
+DAGLI SCHERMI PIU GRANDI */
+
+
+.container {
+    height: 300px;
+ 
+   background:#ffcc00;
+}
+
+@media screen and (min-width:600px) {
+
+.container {
+    /*height viene ereditata dal blocco precedente */
+    background:#00d0ff; /*sovrascrive la regola precedente */
+}
+
+}
+
+/*POSSO COMBINARE LE CONDIZIONI TRA DI LORO, es: */
+
+/* @media screen and (orientation:portrait) and (min-width:400px) */
+
+@media screen and (min-width:1000px) {
+
+    .container {
+        background:#33fa54;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                       MEDIA QUERIES PER ORIENTAMENTO                       */
+/* -------------------------------------------------------------------------- */
+
+@media (orientation: portrait) {
+    /*PORTRAIT: orientamento verticale 
+    /*LANDSCAPE: orientamento orizzontale*/
+    
+    .container {
+        border-radius:50px;
+    }
+    
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                             ALTRE MEDIA QUERIES                            */
+/* -------------------------------------------------------------------------- */
+
+@media print { /*regole per la stampa */
+
+}
+
+/*MEDIA QUERY PER GLI SCREEN READER */
+@media speech {
+    code {
+        speak:literal-puntuation;
+        /*legge i punti e le virgole nei blocchi di codice */
+    }
+}
+
+@media (monochrome) {
+    /*per i display monocromatici */
+}
+
+@media(prefers-color-scheme: dark) { /*oppure light */
+    body {
+        background:#222;
+        color:#efefef;
+    }
+
+    .container {
+        background:#d4aa00;
+    }
+}
+
+@media (prefers-reduced-motion) { /*per utenti che hanno disabilitato le animazioni da sistema */
+
+}
+
+@media (inverted-colors) {
+    /*se l'utente ha invertito i colori a livello di sistema operativo */
+}
