@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Viaggi Homepage</title>
 </head>
@@ -46,27 +46,108 @@
 
         <section id="hero">
             <div class="cta">
-
+                <h1>Lorem, ipsum dolor.</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <a href="#" class="button">Click me!</a>
             </div>
         </section>
 
         <section id="icons">
 
+            <div class="iconBox">
+                
+                <div class="iconWrapper">
+                    <i class="icon-plane-outline"></i>
+                </div>
+
+                <div class="iconText">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, cupiditate?
+                </div>
+
+
+            </div>
+            <div class="iconBox">
+                
+                <div class="iconWrapper">
+                    <i class="icon-location-outline"></i>
+                </div>
+
+                <div class="iconText">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, cupiditate?
+                </div>
+
+
+            </div>
+            <div class="iconBox">
+                
+                <div class="iconWrapper">
+                    <i class="icon-beer"></i>
+                </div>
+
+                <div class="iconText">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, cupiditate?
+                </div>
+
+
+            </div>
+
+        
+
         </section>
 
         <section id="offerte">
 
+            <div class="offertaBox">
+                <div class="oImage">
 
+                    <picture>
+                        <!-- prima dichiaro le immagini per gli schermi grandi: -->
+                        <source media="(min-width:992px)" srcset="img/arizona_d.jpg">
+
+                        <!-- a scalare verso le dimensioni inferiori con min-width: -->
+                        <source media="(min-width:576px)" srcset="img/arizona_t.jpg">
+
+                        <!-- immagine default per schermi piccoli -->
+                        <img src="img/arizona_m.jpg" alt="arizona">
+                    </picture>
+                    
+                </div>
+                <div class="oText">
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores velit laboriosam inventore perferendis dolore non dolorem temporibus quasi. Nulla, fugit ut temporibus dolor impedit molestiae quas. Placeat similique saepe molestias nisi sapiente voluptatibus officia et reprehenderit itaque ad.</p>
+                </div>
+            </div>
+
+
+            <div class="offertaBox">
+                <div class="oImage">
+
+                    <picture>
+                        <!-- prima dichiaro le immagini per gli schermi grandi: -->
+                        <source media="(min-width:992px)" srcset="img/lisbona_d.jpg">
+
+                 
+
+                        <!-- immagine default per schermi piccoli -->
+                        <img src="img/lisbona_m.jpg" alt="arizona">
+                    </picture>
+                    
+                </div>
+                <div class="oText">
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores velit laboriosam inventore perferendis dolore non dolorem temporibus quasi. Nulla, fugit ut temporibus dolor impedit molestiae quas. Placeat similique saepe molestias nisi sapiente voluptatibus officia et reprehenderit itaque ad.</p>
+                </div>
+            </div>
 
         </section>
 
 
-        
+       
+   </main>
 
-
-    </main>
-
-    <footer id="mainFooter"></footer>
+    <footer id="mainFooter">
+        &copy; 2023 Corso Angular
+    </footer>
 
 
 
