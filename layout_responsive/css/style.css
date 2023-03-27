@@ -103,6 +103,56 @@ img {
     width: auto;
 }
 
+/* ---------------------------- ICONA NAVIGAZIONE --------------------------- */
+
+#navIcon {
+    width: 2rem;
+    height: 2rem;
+    position: relative
+  
+    
+}
+ 
+#navIcon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background:#134373;
+
+    transition:0.5s;
+}
+
+#navIcon span:nth-child(2) {
+    top:12px;
+}
+
+#navIcon span:nth-child(3) {
+    top:24px;
+}
+
+/* ------------------------ navicon OPEN (diventa X) ------------------------ */
+
+/*ruoto la prima riga dell'icona e la centro */
+#navIcon.open span:first-child {
+    transform:rotate(135deg);
+    top:18px;
+}
+
+/*nascondo la seconda riga */
+#navIcon.open span:nth-child(2) {
+    opacity:0;
+    /*aggiungo movimento verso sinistra */
+    left:-60px;
+}
+
+/*ruoto la terza riga e la centro */
+#navIcon.open span:nth-child(3) {
+    transform:rotate(-135deg);
+    top:18px;
+} 
+
+
 #mainMenu ul {
     list-style-type: none;
     margin: 0;
@@ -118,6 +168,39 @@ img {
 }
 
 
+/* -------------------------------------------------------------------------- */
+/*                              STILI MENU MOBILE                             */
+/* -------------------------------------------------------------------------- */
+
+/* PER BLOCCARE LO SCROLLING A MENU APERTO: */
+
+.noscroll {
+    overflow: hidden;
+}
+
+.is-mobile #mainMenu {
+    position: fixed;
+    top:4rem;
+    left:0;
+    height:100vh;
+    width:100%;
+    background:white;
+    
+}
+
+.is-mobile #mainMenu ul {
+    /* display: flex; */
+   display: block;
+   width: 100%;
+   text-align: center;
+   padding-top:4rem;
+}
+
+.is-mobile #mainMenu ul li {
+    padding:1rem 0;
+}
+
+
 /* ---------------------------------- HERO ---------------------------------- */
 
 #hero {
@@ -126,6 +209,8 @@ img {
     /* background centrato e ridimensionato automaticamente */
     background-repeat: no-repeat;
     background-size: cover;
+    /*cover: ridimensiona e ritaglia l'immagine per coprire tutto lo spazio*/
+    /*contain: ridimensiona l'immagine per riempire l'elemento ma non la ritaglia */
     background-position: center center;
 
     /*centro la CTA*/
@@ -180,6 +265,10 @@ footer#mainFooter {
 
     #hero {
         background-image: url('../img/hero_desktop.jpg');
+    }
+
+    #navIcon {
+        display: none;
     }
 
 

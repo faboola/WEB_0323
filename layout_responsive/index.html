@@ -39,6 +39,13 @@
                 </li>
             </ul>
         </nav>
+
+        <div id="navIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </header>
 
     <main id="content">
@@ -148,6 +155,26 @@
     <footer id="mainFooter">
         &copy; 2023 Corso Angular
     </footer>
+
+
+
+    <script>
+
+        document.getElementById('navIcon').addEventListener("click", addMenuClass);
+
+        function addMenuClass() {
+            var navIcon = document.getElementById('navIcon');
+            var header = document.getElementById('mainHeader');
+
+            navIcon.classList.toggle('open');
+            header.classList.toggle('is-mobile');
+            //aggiunge all'elemento root <HTML> la classe .noscroll per evitare lo scrollng in menu aperto
+            document.documentElement.classList.toggle('noscroll');
+
+        }
+
+
+    </script>
 
 
 
