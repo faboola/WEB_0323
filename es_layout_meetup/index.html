@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="icon fonts/themify-icons.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="iconfonts/themify-icons.css">
+    <title>Meetup Conference</title>
 </head>
 <body>
 
     <header id="mainHeader">
 
         <div class="headerWrapper">
-            <div class="logo"></div>
+            <div class="logo">
+                <img src="./img/meetup-logo.png" alt="">
+            </div>
             <nav class="menu">
                 <ul>
                     <li><a href="">About</a></li>
@@ -23,19 +28,27 @@
                     <li><a href="">Contact</a></li>
                 </ul>
             </nav>
+
+            <!-- <div class="navIcon">
+                X
+            </div> -->
         </div>
 
     </header>
     <section id="hero">
 
         <div class="cta">           
-            <h1>Lorem ipsum dolor sit amet consectetur.<br>
-                <span class="subtitle">
+            <h1>Lorem ipsum dolor sit amet consectetur.
+                <div class="subtitle">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
+                </div>
             </h1>
             <div class="ctaDate">
                 Da maggio a luglio 2023
+            </div>
+
+            <div class="ctaButton">
+                <button class="button">Buy Tickets Now <i class="ti-arrow-right"></i></button>
             </div>
         </div>
         <div class="rocket">
@@ -50,21 +63,11 @@
         </div>
 
 
-        <div class="sectionWrapper iconsGrid">
+        <div class="sectionWrapper container iconsGrid">
 
             <div class="iconBlock">
                 <div class="iconWrapper">
-                    <i class="icon-ticket"></i>
-                </div>
-
-                <div class="iconText">
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem eligendi dicta asperiores iure quidem officiis voluptate quia excepturi odio?</p>
-                </div>
-            </div>
-            <div class="iconBlock">
-                <div class="iconWrapper">
-                    <i class="icon-speaker"></i>
+                    <i class="ti-ticket"></i>
                 </div>
 
                 <div class="iconText">
@@ -74,7 +77,17 @@
             </div>
             <div class="iconBlock">
                 <div class="iconWrapper">
-                    <i class="icon-world"></i>
+                    <i class="ti-microphone"></i>
+                </div>
+
+                <div class="iconText">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem eligendi dicta asperiores iure quidem officiis voluptate quia excepturi odio?</p>
+                </div>
+            </div>
+            <div class="iconBlock">
+                <div class="iconWrapper">
+                    <i class="ti-world"></i>
                 </div>
 
                 <div class="iconText">
@@ -88,9 +101,9 @@
 
     <section id="speakers">
 
-        <div class="sectionTitle">Meet the speakers</div>
+        <div class="sectionTitle"><h2>Meet the speakers</h2></div>
 
-        <div class="sectionWrapper speakersGrid">
+        <div class="sectionWrapper container speakersGrid">
 
             <!-- START SPEAKER -->
             <div class="speaker">
@@ -104,9 +117,9 @@
                 </div>
 
                 <div class="speakerSocial">
-                    <i class="icon twitter"></i>
-                    <i class="icon-facebook"></i>
-                    <i class="icon-linkedin"></i>
+                    <i class="ti-twitter"></i>
+                    <i class="ti-facebook"></i>
+                    <i class="ti-linkedin"></i>
                 </div>
             </div>
             <!-- END SPEAKER -->
@@ -123,9 +136,9 @@
                 </div>
 
                 <div class="speakerSocial">
-                    <i class="icon twitter"></i>
-                    <i class="icon-facebook"></i>
-                    <i class="icon-linkedin"></i>
+                    <i class="ti-twitter"></i>
+                    <i class="ti-facebook"></i>
+                    <i class="ti-linkedin"></i>
                 </div>
             </div>
             <!-- END SPEAKER -->
@@ -141,9 +154,9 @@
                 </div>
 
                 <div class="speakerSocial">
-                    <i class="icon twitter"></i>
-                    <i class="icon-facebook"></i>
-                    <i class="icon-linkedin"></i>
+                    <i class="ti-twitter"></i>
+                    <i class="ti-facebook"></i>
+                    <i class="ti-linkedin"></i>
                 </div>
             </div>
             <!-- END SPEAKER -->
@@ -159,9 +172,9 @@
                 </div>
 
                 <div class="speakerSocial">
-                    <i class="icon twitter"></i>
-                    <i class="icon-facebook"></i>
-                    <i class="icon-linkedin"></i>
+                    <i class="ti-twitter"></i>
+                    <i class="ti-facebook"></i>
+                    <i class="ti-linkedin"></i>
                 </div>
             </div>
             <!-- END SPEAKER -->
@@ -177,9 +190,9 @@
                 </div>
 
                 <div class="speakerSocial">
-                    <i class="icon twitter"></i>
-                    <i class="icon-facebook"></i>
-                    <i class="icon-linkedin"></i>
+                    <i class="ti-twitter"></i>
+                    <i class="ti-facebook"></i>
+                    <i class="ti-linkedin"></i>
                 </div>
             </div>
             <!-- END SPEAKER -->
@@ -195,9 +208,9 @@
                 </div>
 
                 <div class="speakerSocial">
-                    <i class="icon twitter"></i>
-                    <i class="icon-facebook"></i>
-                    <i class="icon-linkedin"></i>
+                    <i class="ti-twitter"></i>
+                    <i class="ti-facebook"></i>
+                    <i class="ti-linkedin"></i>
                 </div>
             </div>
             <!-- END SPEAKER -->
@@ -205,11 +218,115 @@
         </div>
 
     </section>
-    
-    <section id="pricing"></section>
-    <section id="formSection"></section>
-    <section id="feed"></section>
-    <footer id="mainFooter"></footer>
+
+    <section id="pricing">
+        <div class="sectionTitle"><h2>Buy Tickets</h2></div>
+
+        <div class="sectionWrapper container">
+
+
+            <!-- start ticket -->
+            <div class="ticket">
+                <h3>Early Bird Pass</h3>
+                <div class="price">$ 299</div>
+                <div class="desc">Lorem ipsum dolor sit.</div>
+
+                <button class="button">
+                    Buy (6 remaining)
+                </button>
+
+            </div>
+            <!-- end ticket -->
+
+            <!-- start ticket -->
+            <div class="ticket">
+                <h3>Early Bird Pass</h3>
+                <div class="price">$ 299</div>
+                <div class="desc">Lorem ipsum dolor sit.</div>
+
+                <button class="button">
+                    Buy (10 remaining)
+                </button>
+
+            </div>
+            <!-- end ticket -->
+
+
+        </div>
+    </section>
+    <section id="formSection">
+        <div class="sectionWrapper container">
+            <div class="formWrapper">
+                <h2><i class="ti-email"></i> Contact Form</h2>
+
+                <form action="" method="">
+                    <!-- l'attributo FOR fa riferimento all'ID dell'input a cui si riferisce -->
+
+                    <div class="formElement">
+                        <label for="name">Name and surname</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="formElement">
+                        <label for="email">E-mail address</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div class="formElement">
+                        <label for="message">Your message</label>
+                        <textarea name="message" id="messagge"></textarea>
+                    </div>
+
+                    <div class="formElement buttonWrapper">
+                     
+
+                        <button class="button" type="submit">
+                            <i class="ti-arrow-right"></i>  Send!
+                        </button>
+                    </div>
+
+
+
+            </div>
+
+            <div class="feedWrapper">
+                <h2><i class="ti-twitter"></i> Latest tweets</h2>
+
+                <ul class="tweets">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus iste dolores vitae, consectetur id hic ipsam magnam accusamus suscipit nemo.
+                        <div class="tUser">@username</div>
+                    </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus iste dolores vitae, consectetur id hic ipsam magnam accusamus suscipit nemo.
+                        <div class="tUser">@username</div>
+                    </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus iste dolores vitae, consectetur id hic ipsam magnam accusamus suscipit nemo.
+                        <div class="tUser">@username</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="mainFooter">
+
+        <div class="footerWrapper container">
+            <div class="fInfo">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati.
+            </div>
+            <div class="fLegal">
+                <nav>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </footer>
   
 </body>
 </html>

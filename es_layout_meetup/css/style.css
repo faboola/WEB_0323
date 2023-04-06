@@ -1,0 +1,283 @@
+/* -------------------------------------------------------------------------- */
+/*                                VARIABILI CSS                               */
+/* -------------------------------------------------------------------------- */
+
+
+:root { /*il selettore indica lo SCOPE delle variabili */
+    --primary-color: #036BC7;
+    --secondary-color: #FCD93B;
+    --accent-color: #DD5138;
+
+    --dark: #383838;
+    --darkest: #2d2d2d;
+
+    --body-bg: #fefefe;
+}
+
+* {
+    box-sizing: border-box;
+    /*imposto il box model border-box per gestire meglio le dimensioni e i padding sugli elementi */
+}
+
+body {
+    font-family: 'Dosis',sans-serif;
+    background:var(--body-bg);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.sectionTitle h2 {
+    margin-top: 0;
+    padding-top: 2rem;
+
+    /*per evitare che il titolo all'inizio della sezione crei spazi bianchi nella sezione sopra */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+}
+
+.button {
+    background:var(--accent-color);
+    color:var(--body-bg);
+    border:none;
+    padding:0.75rem 1.25rem;
+    border-radius:6px;
+}
+
+.container {
+    width:96%;
+    margin: 0 auto;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+
+#mainHeader {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top:0;
+}
+
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 3rem;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    HERO                                    */
+/* -------------------------------------------------------------------------- */
+
+#hero {
+    /*sintassi per richiamare la variabile */
+    background-color: var(--primary-color);
+
+    color: var(--body-bg);
+    height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta {
+    text-align: center;
+}
+
+.cta h1 {
+    font-weight: 300;
+}
+
+.rocket {
+    display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    ICONS                                   */
+/* -------------------------------------------------------------------------- */
+
+.sectionTitle {
+    text-align: center;
+}
+
+.iconBlock {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+.iconWrapper {
+    color:var(--primary-color);
+    font-size: 5rem;
+}
+
+.iconText h3 {
+    margin:0.5rem auto;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  SPEAKERS                                  */
+/* -------------------------------------------------------------------------- */
+
+.speaker {
+    border:1px solid #ddd;
+    text-align: center;
+    padding:2rem 1rem;
+}
+
+/*alterno i colori degli speaker da mobile */
+.speaker:nth-of-type(even) {
+    background:#f4f4f4;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                             TICKETS AND PRICING                            */
+/* -------------------------------------------------------------------------- */
+
+#pricing {
+    background:var(--secondary-color);
+    text-align: center; /*ereditato da tutti i figli */
+
+    
+    padding-bottom: 3rem;
+}
+
+.ticket {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 300;
+    color:var(--accent-color);
+    text-shadow: 1px 1px rgba(0,0,0,0.75);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                FORM E TWEETS                               */
+/* -------------------------------------------------------------------------- */
+
+#formSection {
+    background: var(--dark);
+    color: var(--body-bg);
+}
+
+.container h2, .container h3 {
+font-size: 2rem;
+}
+
+
+.formWrapper, .feedWrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.formWrapper h2, .feedWrapper h2 {
+
+    text-align: center;
+    margin-top: 0; /*evita lo spazio bianco che si creerebbe a causa del margin top */
+    font-size: 1.5rem;
+    font-weight: 300;
+
+}
+
+
+input,label,textarea {
+    display: block;
+    width: 100%;
+    padding:0.5rem;
+}
+
+label {
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+.buttonWrapper {
+    text-align: right;
+}
+
+button[type="submit"] { /*selettore con attributo */
+    background:var(--secondary-color);
+    color:var(--dark);
+    text-transform: uppercase; /*TUTTO MAIUSCOLO */
+    
+}
+
+ul.tweets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul.tweets li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    border-bottom:1px solid #666;
+
+}
+
+ul.tweets li:last-of-type { /*tolgo il bordo all'ultimo LI */
+    border-bottom:none;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+#mainFooter {
+    background: var(--darkest);
+    color:var(--body-bg);
+    text-align: center;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#mainFooter a {
+    color:var(--secondary-color);
+}
+
+.fLegal nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    column-gap:0.75rem;
+}
