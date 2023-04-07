@@ -62,6 +62,83 @@ h3 {
     margin: 0 auto;
 }
 
+a, a:visited {
+    color:var(--primary-color);
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 STILI MENU                                 */
+/* -------------------------------------------------------------------------- */
+
+
+.mainMenu {
+    display: none; /*nascondo il menu da mobile */
+}
+
+#navIcon {
+    font-size: 2rem;
+    color:var(--secondary-color);
+}
+
+.mainMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.mainMenu a {
+    text-decoration: none;
+    color:var(--body-bg);
+    transition: all 0.2s ease-in-out; 
+/*    TRANSITION:
+   proprietà | durata | tipo di transizione */
+}
+
+.mainMenu a:hover {
+    color:var(--secondary-color);
+}
+
+#mainHeader.is-mobile .mainMenu {
+    display: block;
+
+    position: fixed;
+    bottom: 0;
+    left:0;
+    height: calc(100vh - 52px); /*il menu è alto come tutto il viewport a cui sottraggo la header */
+    width: 100%;
+
+    background-color: var(--primary-color);
+}
+
+#mainHeader.is-mobile .mainMenu a { /*link su menu mobile */
+
+    color:var(--body-bg);
+    font-size: 1.5rem;
+
+}
+
+#mainHeader.is-mobile .mainMenu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainHeader.is-mobile .mainMenu ul li {
+
+    text-align: center;
+    padding:1rem 0;
+
+}
+
+
+
+
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -69,10 +146,17 @@ h3 {
 /* -------------------------------------------------------------------------- */
 
 #mainHeader {
+  
     position: fixed;
     width: 100%;
     left: 0;
     top:0;
+}
+
+#mainHeader.scrolled {
+   
+    background: #036BC7;
+   
 }
 
 .headerWrapper {
@@ -85,16 +169,7 @@ h3 {
     height: 3rem;
 }
 
-.mainMenu {
-    display: none; /*nascondo il menu da mobile */
-}
 
-.mainMenu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
 
 /* -------------------------------------------------------------------------- */
 /*                                    HERO                                    */
@@ -102,7 +177,8 @@ h3 {
 
 #hero {
     /*sintassi per richiamare la variabile */
-    background-color: var(--primary-color);
+    background: var(--primary-color);
+    background: linear-gradient(0deg, rgba(3,107,199,1) 0%, rgb(25, 149, 170) 52%, rgba(11,56,96,1) 100%);
 
     color: var(--body-bg);
     height: 100vh;
@@ -312,6 +388,11 @@ ul.tweets li:last-of-type { /*tolgo il bordo all'ultimo LI */
     }
 
     /* ---------------------------------- MENU ---------------------------------- */
+
+    #mainHeader {
+        padding:1rem 0;
+      
+    }
 
     .mainMenu {
         display: block;

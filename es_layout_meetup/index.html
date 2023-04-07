@@ -16,7 +16,7 @@
 
     <header id="mainHeader">
 
-        <div class="headerWrapper">
+        <div class="headerWrapper container">
             <div class="logo">
                 <img src="./img/meetup-logo.png" alt="">
             </div>
@@ -346,6 +346,32 @@
             header.classList.toggle('is-mobile');
 
         }
+
+
+        //NAVBAR
+
+        const nav = document.querySelector('#mainHeader');
+
+        function fixNav() {
+
+            //window.scrollY restituisce un valore in pixel che mi dice di quanto ho scrollato la finestra
+           
+            if(window.scrollY > 100 ) { //valore in pixel 
+                nav.classList.add('scrolled')
+            }
+
+            else {
+                nav.classList.remove('scrolled')
+            }
+        }
+
+        window.addEventListener('scroll', fixNav);
+
+
+
+
+
+        
 
     </script>
   
