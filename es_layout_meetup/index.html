@@ -20,7 +20,7 @@
             <div class="logo">
                 <img src="./img/meetup-logo.png" alt="">
             </div>
-            <nav class="menu">
+            <nav class="mainMenu">
                 <ul>
                     <li><a href="">About</a></li>
                     <li><a href="">Buy Tickets</a></li>
@@ -29,31 +29,35 @@
                 </ul>
             </nav>
 
-            <!-- <div class="navIcon">
-                X
-            </div> -->
+            <div class="menuIconWrapper">
+                <div id="navIcon" >
+                   <i class="ti-menu"></i>
+                </div>
+            </div>
         </div>
 
     </header>
     <section id="hero">
 
-        <div class="cta">           
-            <h1>Lorem ipsum dolor sit amet consectetur.
-                <div class="subtitle">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <div class="heroWrapper container">
+            <div class="cta">
+                <h1>Lorem ipsum dolor sit amet consectetur.
+                    <div class="subtitle">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </h1>
+                <div class="ctaDate">
+                    Da maggio a luglio 2023
                 </div>
-            </h1>
-            <div class="ctaDate">
-                Da maggio a luglio 2023
+                <div class="ctaButton">
+                    <button class="button">Buy Tickets Now <i class="ti-arrow-right"></i></button>
+                </div>
             </div>
+            <div class="rocket">
+                <img src="./img/rocket.png" alt="nave spaziale che parte">
+            </div>
+        </div>
 
-            <div class="ctaButton">
-                <button class="button">Buy Tickets Now <i class="ti-arrow-right"></i></button>
-            </div>
-        </div>
-        <div class="rocket">
-            <img src="./img/rocket.png" alt="nave spaziale che parte">
-        </div>
 
     </section>
     <section id="icons">
@@ -72,7 +76,7 @@
 
                 <div class="iconText">
                     <h3>Lorem, ipsum dolor.</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem eligendi dicta asperiores iure quidem officiis voluptate quia excepturi odio?</p>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, ipsa rem harum optio sapiente obcaecati magni modi, ut et ad officiis praesentium exercitationem quo temporibus doloribus voluptas amet expedita dolorem!</p>
                 </div>
             </div>
             <div class="iconBlock">
@@ -131,8 +135,8 @@
                 </div>
 
                 <div class="speakerText">
-                    <h3 class="speakerName">John Doe</h3>
-                    <p class="speakerBio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facilis illo soluta nostrum est possimus eligendi sed reprehenderit vitae. Ipsa esse illo unde. Doloremque repellat laboriosam illum voluptatum odit quidem?</p>
+                    <h3 class="speakerName">Jane Doe</h3>
+                    <p class="speakerBio">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, commodi? ipsum dolor sit amet consectetur adipisicing elit. Fugit Lorem ipsum dolor sit. Lorem ipsum dolor sit amet. facilis illo soluta nostrum est possimus eligendi sed reprehenderit vitae. Ipsa esse illo unde. Doloremque repellat laboriosam illum voluptatum odit quidem?</p>
                 </div>
 
                 <div class="speakerSocial">
@@ -150,7 +154,7 @@
 
                 <div class="speakerText">
                     <h3 class="speakerName">John Doe</h3>
-                    <p class="speakerBio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facilis illo soluta nostrum est possimus eligendi sed reprehenderit vitae. Ipsa esse illo unde. Doloremque repellat laboriosam illum voluptatum odit quidem?</p>
+                    <p class="speakerBio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facilis illo soluta nostrum est possimus eligendi sed reprehenderit vitae. Ipsa esse illo unde.</p>
                 </div>
 
                 <div class="speakerSocial">
@@ -167,7 +171,7 @@
                 </div>
 
                 <div class="speakerText">
-                    <h3 class="speakerName">John Doe</h3>
+                    <h3 class="speakerName">Jane Doe</h3>
                     <p class="speakerBio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facilis illo soluta nostrum est possimus eligendi sed reprehenderit vitae. Ipsa esse illo unde. Doloremque repellat laboriosam illum voluptatum odit quidem?</p>
                 </div>
 
@@ -203,7 +207,7 @@
                 </div>
 
                 <div class="speakerText">
-                    <h3 class="speakerName">John Doe</h3>
+                    <h3 class="speakerName">Jane Doe</h3>
                     <p class="speakerBio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facilis illo soluta nostrum est possimus eligendi sed reprehenderit vitae. Ipsa esse illo unde. Doloremque repellat laboriosam illum voluptatum odit quidem?</p>
                 </div>
 
@@ -254,6 +258,7 @@
 
         </div>
     </section>
+    
     <section id="formSection">
         <div class="sectionWrapper container">
             <div class="formWrapper">
@@ -327,6 +332,22 @@
         </div>
 
     </footer>
+
+    <script>
+        document.getElementById('navIcon').addEventListener("click", addMenuClass);
+
+        //funzione per aggiungere classe al menu
+
+        function addMenuClass() {
+            var navIcon = document.getElementById('navIcon');
+            var header = document.getElementById('mainHeader');
+            navIcon.classList.toggle('open'); //aggiunge classe alla navIcon
+
+            header.classList.toggle('is-mobile');
+
+        }
+
+    </script>
   
 </body>
 </html>
