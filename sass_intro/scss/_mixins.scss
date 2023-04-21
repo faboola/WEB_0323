@@ -9,3 +9,41 @@
     background: $from;
     background: linear-gradient($direction, $from 25%, $to 100%);
 }
+
+
+@mixin myButton($bgColor: #FF00FF, $textColor: #222, $outline: false) {
+
+    background: $bgColor;
+    color: $textColor;
+
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius:10px;
+
+    transition:0.25s;
+
+    &:hover { 
+        background:darken($bgColor,5%); //DARKEN scurisce il colore 
+    }
+
+    @if $outline==true {
+        background: transparent;
+        border:1px solid $textColor;
+
+        &:hover {
+            background: transparentize($textColor,0.9);
+
+            //TRANSPARENTIZE: rende trasparente un colore
+            // supporta due parametri: il colore e il valore di trasparenza da 0 a 1;
+            // 1 è completamente trasparente, 0 è solido 
+        }
+    }
+
+}
+
+//ALTRE FUNZIONI PER I COLORI:
+
+// lighten(color,valore 0-100%) - Schiarisce
+// darken(color,valore 0-100%) - Scurisce
+// saturate(color,valore 0-100%) - Aumenta saturazione
+// desaturate(color,valore 0-100%) - Riduce saturazione

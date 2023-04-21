@@ -10,10 +10,27 @@
 
 
 body {
-   @include myGradient(#00CCFF,#FF00DD,90deg); //il mixin si esegue con @include
+    background: $bgcolor;
     color:$textcolor;
+
+     //@include myGradient(#00CCFF,#FF00DD,90deg); 
+   //il mixin si esegue con @include
 }
 
 h1 {
+    font-family: $headings-font-family;
     font-size: map-get($font-sizes,"bigger");
+    font-weight: 900;
+}
+
+a.button {
+    @include myButton(rgb(6, 95, 158), white, true);
+}
+
+
+//EXTEND
+
+p.bigText {
+    @extend h1;
+    //@extend prende le proprietà di un selettore e le replica in un altro selettore
 }

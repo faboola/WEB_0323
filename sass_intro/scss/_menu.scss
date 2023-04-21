@@ -36,13 +36,21 @@
     .menuItem { //tutti i .menuItem dentro .mainMenu. Equivale a  scrivere .mainMenu .menuItem
         border:1px solid white;
 
-
         a {
             font-size: 2rem;
             color:$textcolor;
+
+            &:hover {
+                color:#ffcc00;
+            }
+
+            &.is-active {
+                color:red;
+            }
+
+
            
         }
 
     }
 }
-
