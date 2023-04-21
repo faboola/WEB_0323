@@ -12,6 +12,25 @@
 
 // 2. Include any default variable overrides here
 
+/* -------------------------------------------------------------------------- */
+/*                             OVERRIDE VARIABILI                             */
+/* -------------------------------------------------------------------------- */
+
+//ESEMPIO
+//$primary : #dd0000;
+
+/* FONTS USATI NEL PROGETTO */
+
+$font-family-sans-serif: 'Souce Sans', sans-serif;
+$font-family-serif: 'Souce Serif Pro', sans-serif;
+
+$font-size-base : 1rem;
+
+
+$h1-font-size:                $font-size-base * 3.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../node_modules/bootstrap/scss/variables";
