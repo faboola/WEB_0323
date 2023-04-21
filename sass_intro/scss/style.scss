@@ -1,0 +1,57 @@
+// VARIABILI
+
+$bgcolor : #dd2222;
+$textcolor : #222;
+
+
+body {
+    background: $bgcolor;
+
+    color:$textcolor;
+    
+}
+
+//SELETTORI NIDIFICATI
+
+/* -------------------------- versione vanilla CSS -------------------------- */
+
+// .mainMenu {
+//     display: flex;
+//     column-gap: 1rem;
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// .mainMenu .menuItem {
+//     border:1px solid white;
+// }
+
+// .mainMenu .menuItem a {
+//     font-size: 2rem;
+//     color:$textcolor;
+// }
+
+/* ------------------------------ VERSIONE SASS ----------------------------- */
+
+
+.mainMenu {
+    display: flex;
+    column-gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .menuItem { //tutti i .menuItem dentro .mainMenu. Equivale a  scrivere .mainMenu .menuItem
+        border:1px solid white;
+
+
+        a {
+            font-size: 2rem;
+            color:$textcolor;
+           
+        }
+
+    }
+}
+
