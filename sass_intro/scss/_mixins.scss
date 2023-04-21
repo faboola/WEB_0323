@@ -1,0 +1,11 @@
+/* -------------------------------------------------------------------------- */
+/*                 I MIXINS IN SASS SONO UNA SORTA DI FUNZIONE                */
+/* -------------------------------------------------------------------------- */
+
+//un mixin si dichiara con la direttiva @mixin 
+//e si richiama poi con @include
+
+@mixin myGradient($from, $to, $direction:0deg) {
+    background: $from;
+    background: linear-gradient($direction, $from 25%, $to 100%);
+}
