@@ -1,14 +1,12 @@
-// VARIABILI
+//IMPORT DEI PARZIALI
 
-$bgcolor : #dd2222;
-$textcolor : #222;
+@import 'variables'; //senza _ e senza estensione
 
 
 body {
     background: $bgcolor;
-
     color:$textcolor;
-    
+  
 }
 
 //SELETTORI NIDIFICATI
@@ -20,7 +18,7 @@ body {
 //     column-gap: 1rem;
 //     list-style-type: none;
 //     margin: 0;
-//     padding: 0;
+//     padding: 0; 
 // }
 
 // .mainMenu .menuItem {
@@ -41,6 +39,9 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
+    $bgcolor: green; //LO SCOPE DI QUESTA VARIABILE È RELATIVO A .mainMenu
+    background-color:$bgcolor; //compila .mainMenu in VERDE.
 
     .menuItem { //tutti i .menuItem dentro .mainMenu. Equivale a  scrivere .mainMenu .menuItem
         border:1px solid white;

@@ -1,0 +1,19 @@
+//COLORI
+$bgcolor : #222;
+$textcolor: #dedede;
+
+//BORDI SPAZI ETC
+$spacer : 1rem;
+$border-radius: 12px;
+
+//FONTS
+$body-font-family: Garamond, Times, 'Times New Roman', serif;
+$headings-font-family: Helvetica, Arial, 'Helvetica Neue', sans-serif;
+
+$font-sizes: ( // SASS MAP - funziona in modo simile agli array
+    "small"     :0.85rem,
+    "normal"    :1rem,
+    "big"       :2rem,
+    "bigger"    :3rem,
+)
+
