@@ -1,0 +1,61 @@
+/* -------------------------------------------------------------------------- */
+/*                             I MIEI STILI CUSTOM                            */
+/* -------------------------------------------------------------------------- */
+
+.vetrina { 
+    @include make-row(); //crea una RIGA del grid system
+}
+
+.evento {
+    @include make-col-ready();
+    @include make-col(4);
+     //senza parametri crea colonne uguali
+}
+
+
+//MIXIN PER MEDIA QUERY
+
+h1 {
+    color:$pink;
+
+    //mixin che crea una media query tipo min-width
+    @include media-breakpoint-up(md) {
+        color:$green;
+    }
+
+    @include media-breakpoint-up(lg) {
+        color:$indigo;
+    }
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                   RIGHE E COLONNE RESPONSIVE CON I MIXIN                   */
+/* -------------------------------------------------------------------------- */
+
+
+.news-section {
+    @include make-row();
+
+}
+
+.news { //SINGOLA NOTIZIA
+
+@include make-col-ready(); //prepara la colonna
+@include make-col(12); //col-12 da 0px in su
+
+@include media-breakpoint-up(md) {
+    @include make-col(6); //col-6 da 768px in su
+}
+
+@include media-breakpoint-up(lg) {
+    @include make-col(4);
+}
+
+@include media-breakpoint-up(xl) {
+    @include make-col(3);
+}
+
+
+
+}
