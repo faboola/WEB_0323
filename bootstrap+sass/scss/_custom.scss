@@ -2,13 +2,16 @@
 /*                             I MIEI STILI CUSTOM                            */
 /* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
+/*                         MIXIN PER LA BOOTSTRAP GRID                        */
+/* -------------------------------------------------------------------------- */
 .vetrina { 
     @include make-row(); //crea una RIGA del grid system
 }
 
 .evento {
-    @include make-col-ready();
-    @include make-col(4);
+    @include make-col-ready(); //prepara il div a diventare colonna
+    @include make-col(4); //crea l'elemento .col-4
      //senza parametri crea colonne uguali
 }
 
@@ -19,6 +22,7 @@ h1 {
     color:$pink;
 
     //mixin che crea una media query tipo min-width
+    //equivale a  @media screen and (min-width: 768px)
     @include media-breakpoint-up(md) {
         color:$green;
     }
@@ -36,22 +40,27 @@ h1 {
 
 .news-section {
     @include make-row();
-
+    //per fare una ROW con spaziatura diversa:
+    //@include make-row($gutter:4rem);
 }
 
-.news { //SINGOLA NOTIZIA
+.notizia { //SINGOLA NOTIZIA
 
 @include make-col-ready(); //prepara la colonna
 @include make-col(12); //col-12 da 0px in su
 
+
+//stili per MEDIUM
 @include media-breakpoint-up(md) {
     @include make-col(6); //col-6 da 768px in su
 }
 
+//stili per LARGE
 @include media-breakpoint-up(lg) {
     @include make-col(4);
 }
 
+//stili per XL
 @include media-breakpoint-up(xl) {
     @include make-col(3);
 }
