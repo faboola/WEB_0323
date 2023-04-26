@@ -46,25 +46,25 @@ h1 {
 
 .notizia { //SINGOLA NOTIZIA
 
-@include make-col-ready(); //prepara la colonna
-@include make-col(12); //col-12 da 0px in su
+    @include make-col-ready(); //prepara la colonna
+    @include make-col(12); //col-12 da 0px in su
 
 
-//stili per MEDIUM
-@include media-breakpoint-up(md) {
-    @include make-col(6); //col-6 da 768px in su
-}
+        //stili per MEDIUM
+        @include media-breakpoint-up(md) {
+            //NOTA: make-col-ready c'è già dallo stile precedente
+            @include make-col(6); //col-6 da 768px in su
+        }
 
-//stili per LARGE
-@include media-breakpoint-up(lg) {
-    @include make-col(4);
-}
+        //stili per LARGE
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
 
-//stili per XL
-@include media-breakpoint-up(xl) {
-    @include make-col(3);
-}
-
+        //stili per XL
+        @include media-breakpoint-up(xl) {
+            @include make-col(3);
+        }
 
 
 }
